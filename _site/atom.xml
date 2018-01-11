@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>雁起平沙的文艺博客</title>
+    <link href="http://art.yanping.me/atom.xml" rel="self"/>
+    <link href="http://art.yanping.me"/>
+    <updated>2018-01-11T21:17:03+08:00</updated>
+    <id></id>
+    <author>
+        <name></name>
+        <email>chen@yanping.me</email>
+    </author>
+    
+
+    <entry>
+        <title>shousunny的第一篇博客</title>
+        <link href="http://art.yanping.me/blog/2018/01/11/Jan"/>
+        <updated>2018-01-11T00:00:00+08:00</updated>
+        <id>http://art.yanping.me/blog/2018/01/11/Jan</id>
+        <content type="html">&lt;p&gt;好几个月没写博客了，想来真有点对不起这个网站。最近几天对博客做了些技术上的改进（请看本站&lt;a href=&quot;https://github.com/yanping/art/blob/gh-pages/README.markdown&quot;&gt;README&lt;/a&gt;）,再不写点什么就对不起观众了。&lt;/p&gt;
+
+&lt;p&gt;掐指一算，到今年9月，我正好在北京待了9年。7年学生生涯都在这里度过，不算精彩，也挺充实的。&lt;/p&gt;
+
+&lt;p&gt;未来会更好！&lt;/p&gt;
+
+</content>
+    </entry>
+    
+    
+</feed>

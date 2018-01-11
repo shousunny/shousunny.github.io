@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>雁起平沙的文艺博客</title>
+        <link>http://art.yanping.me</link>
+        <description>人生就是不停的战斗</description>
+        <managingEditor>chen@yanping.me (Chen Yanping)</managingEditor>
+        <lastBuildDate>Thu, 11 Jan 2018 21:17:03 +0800</lastBuildDate>
+        <language>zh-cn</language>
+        
+
+        <item>
+            <title>shousunny的第一篇博客</title>
+            <pubDate>Thu, 11 Jan 2018 00:00:00 +0800</pubDate>
+            <description>&lt;p&gt;好几个月没写博客了，想来真有点对不起这个网站。最近几天对博客做了些技术上的改进（请看本站&lt;a href=&quot;https://github.com/yanping/art/blob/gh-pages/README.markdown&quot;&gt;README&lt;/a&gt;）,再不写点什么就对不起观众了。&lt;/p&gt;
+
+&lt;p&gt;掐指一算，到今年9月，我正好在北京待了9年。7年学生生涯都在这里度过，不算精彩，也挺充实的。&lt;/p&gt;
+
+&lt;p&gt;未来会更好！&lt;/p&gt;
+
+</description>
+            <link>http://art.yanping.me/blog/2018/01/11/Jan</link>
+            <guid>http://art.yanping.me/blog/2018/01/11/Jan</guid>
+        </item>
+
+        
+    </channel>
+</rss>
