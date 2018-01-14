@@ -1,7 +1,7 @@
 # shousunny的技术博客
 
 好记心不如烂笔头，记录成长和学习道路上的收获，分享给大家，也留给自己。
-[shousunny技术博客]（https://shousunny.github.io）
+（https://shousunny.github.io ）
 ### 使用条件
 
 Jekyll 支持 Mac 、Windows、ubuntu 、Linux 操作系统                     
