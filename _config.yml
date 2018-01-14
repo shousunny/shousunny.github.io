@@ -1,12 +1,12 @@
 # Basic
-title: Robotkang
-subtitle: 自留地
+title: shousunny
+subtitle: shousunny的技术博客
 description: 欢迎来到我的个人网站~
 # 头像里面的标题
-avatarTitle: RobotKang
+avatarTitle: shousunny
 # 头像里面的描述
-avatarDesc: 机器人赛事/嵌入式
-url: "http://robotkang.cc"
+avatarDesc: 器识为先，文艺其从
+url: "https://shousunny.github.io"
 
 # Comment
 comment:
@@ -17,11 +17,11 @@ comment:
 # Social
 social:
     weibo: 123456789
-    weixing: kang1390305137 
-    github: MengZheK
+    weixing: shousunny 
+    github: shousunny
     # twitter: 
-    mail: robotkang@foxmail.com
-    csdn: robotkang
+    mail: shousunny@foxmail.com
+    csdn: 123456789
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 

@@ -6,27 +6,27 @@ date: 2017-12-27
 <a href="/photos/" target="_blank"><img src="http://omjh2j5h3.bkt.clouddn.com/%E5%A4%A9%E7%AD%96.jpg" width="150" height="150" alt="photos"/></a>
 
 <p>
-一个刚刚走出象牙塔的 Maker「未更新」<a href="{{ site.baseurl }}/jianli.pdf" target="_blank"> 「我的简历」 </a>    
+新博客上手，不知道说什么。。。。。<a href="{{ site.baseurl }}/jianli.pdf" target="_blank"> 「我的简历」 </a>    
 
 
 <div style="color:#FF6633">
-<p>	三尺微命，一介书生。求学于卫星湖畔，黄瓜山下，欲潜心研究智能机器人开发应用之道。然所学颇杂，对诸多方面均有涉猎，喜欢研究一些新技术和关注一些最新的科技~
+<p>	~~~~~
 </p>
 </div>
 <p>
-平时喜欢整理个人博客，逛逛技术论坛     
+xxxxx     
 <p>
-<!-->喜欢日本，想着如果有机会一定会去日本生活一段时间<-->        
+<!-->xxxxxx<-->        
 <div style="color:#008B00">
 <p>
-喜欢Spoken English，虽然现在很渣，但一直在努力...        
+xxxxx...        
 </p>
 
 </div>
 <p>
-同时喜欢老罗和晓松，虽然他俩还撕逼，罗跟谁不撕逼，爱听老罗的单口相声           
+xxxxx           
 <p>
-I'm a single-dog.  But codes and godgirl are my favorite.  Life is colorful, this website   is a window which used to present the color of my life.       
+xxxxx.       
 
 <p>
 
@@ -35,16 +35,16 @@ I'm a single-dog.  But codes and godgirl are my favorite.  Life is colorful, thi
 <p>
 
 
-也许你听说过，「业余时间决定人生」；也许你还听说过，「听过很多道理，依然过不好这一生」。书籍、代码、博客、运动、电影、美剧、游戏，这就是我的业余生活。            
+xxxxx            
 
 
 <div style="color:#708090">
 <p>
-     我的能力就这么多。我若全心工作，则必然忽略生活；我若用心生活，则必然一事无成；我若两者兼顾，又难免平庸
+     xxxxx
 </p>
 </div>
 <p>
-趁我在还能看得进书写得动代码的年纪，努力一回，看看这平庸的资质究竟能发挥几分。
+xxxx
 
 <p>
 
@@ -73,8 +73,8 @@ I'm a single-dog.  But codes and godgirl are my favorite.  Life is colorful, thi
 	}
 </script>
 
-<p>邮箱：robotkang@foxmail.com &emsp;<a href="#" onmouseover="mousemethod('block','img1')" onmouseout="mousemethod('none','img1')" style="color:#FF4500;text-decoration:none">微信：kang1390305137</a><img id="img1" src="http://omjh2j5h3.bkt.clouddn.com/kangweix.png" style="display:none;"  width="128" height="128">&emsp;
-	<a href="#" onmouseover="mousemethod('block','img2')" onmouseout="mousemethod('none','img2')" style="color:#008B00;text-decoration:none">公众号：创客工坊DIY</a><img id="img2" src="http://omjh2j5h3.bkt.clouddn.com/kanggzh.png" style="display:none;" width="128" height="128" >
+<p>邮箱：shousunny@foxmail.com &emsp;<a href="#" onmouseover="mousemethod('block','img1')" onmouseout="mousemethod('none','img1')" style="color:#FF4500;text-decoration:none">微信：shousunny</a><img id="img1" src="http://omjh2j5h3.bkt.clouddn.com/kangweix.png" style="display:none;"  width="128" height="128">&emsp;
+	<a href="#" onmouseover="mousemethod('block','img2')" onmouseout="mousemethod('none','img2')" style="color:#008B00;text-decoration:none">公众号：ShousunnyChatbot</a><img id="img2" src="http://omjh2j5h3.bkt.clouddn.com/kanggzh.png" style="display:none;" width="128" height="128" >
  
 <p>
 <a href="/lovekang/" style="color:#708090"  target="_blank"> <h5>Website Time</h5></a>  

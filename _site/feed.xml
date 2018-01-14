@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shousunny</title>
+    <description>欢迎来到我的个人网站~</description>
+    <link>https://shousunny.github.io/</link>
+    <atom:link href="https://shousunny.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 14 Jan 2018 14:15:48 +0800</pubDate>
+    <lastBuildDate>Sun, 14 Jan 2018 14:15:48 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Jekyll+Github个人博客构建之路</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本文转载自&lt;a href=&quot;http://www.lilian.info&quot; target=&quot;_blank&quot;&gt;Lilian&lt;/a&gt;，后稍加改之。特此声明！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;本博客的搭建真是历经了千辛万苦、一步一坑啊。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;参考博客&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://baixin.io/2016/10/jekyll_tutorials1/&quot;&gt;Jekyll搭建个人博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;说在前面的话&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;我们需要做很多事情。包括环境配置，账号注册，域名购买（不是必须）等。之前一直想搞一个属于自己的博客，16年我以16元的价格买了一个域名「话说域名的续费有点小贵啊..」并且用python搭了一个离线的博客之后就不了了之了「关键部署太麻烦..」。直到前几又萌生出了搭建博客的心思，才又重新搞起。好在，经过几天的瞎搞，弄出来了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;几个关键内容&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll
+    &lt;ul&gt;
+      &lt;li&gt;Ruby&lt;/li&gt;
+      &lt;li&gt;DevKit&lt;/li&gt;
+      &lt;li&gt;Pygments&lt;/li&gt;
+      &lt;li&gt;Python&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Github
+    &lt;ul&gt;
+      &lt;li&gt;账号&lt;/li&gt;
+      &lt;li&gt;客户端&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;域名&lt;/li&gt;
+  &lt;li&gt;网站统计
+    &lt;ul&gt;
+      &lt;li&gt;百度&lt;/li&gt;
+      &lt;li&gt;google&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;多说评论系统&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;一步一步建立自己的小站&lt;/h2&gt;
+
+&lt;h3 id=&quot;github&quot;&gt;建立github&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;注册github。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;建立仓库。仓库名为&lt;用户名&gt;.github.io，详细请参看该博客&lt;a href=&quot;http://blog.csdn.net/renfufei/article/details/37725057/&quot;&gt;github建立个人博客&lt;/a&gt;&lt;/用户名&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;上述都是在github网页中操作。为了后续测试及更新博客的方便安装github客户端。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;域名等设置&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;我是在&lt;a href=&quot;https://www.aliyun.com&quot;&gt;阿里云&lt;/a&gt;网站购买。也可以去其他地方。注册用户，挑选合适的域名，付款（支付宝，比较方便）。然后需要域名空间绑定，找域名服务器管理商进行管理。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;图床用了&lt;a href=&quot;https://portal.qiniu.com/signup?code=3lfl9quhqj902&quot;&gt;七牛&lt;/a&gt;家的。免费版的目前够用，放一些图片比较方便&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;windowsjekylllinux&quot;&gt;Windows上安装Jekyll「也可用linux」&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;参考：&lt;a href=&quot;http://blog.csdn.net/rainloving/article/details/45745491&quot;&gt;Windows 上安装 Jekyll&lt;/a&gt;。安装好Jekyll后。打开github客户端，登录。将之前建立的仓库clone到本地。例如我的：dearLilian.github.io， clone到d://lilian/下。就会看到d://lilian/下出现了一个名为dearLilian.github.io的文件夹。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;网站评论与统计&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先是网站统计，你需要在&lt;a href=&quot;http://tongji.baidu.com/web/register&quot;&gt;百度统计&lt;/a&gt;和&lt;a href=&quot;https://www.google.com/analytics/&quot;&gt;Google Analytics&lt;/a&gt;注册账号，并提取相应的id（详细操作请baidu or google）例如我的baidu id为e572ae9801b3a18891f123796b889f77，google id为UA-88738012-1，后面会使用。&lt;/li&gt;
+  &lt;li&gt;其次是网站的评论管理系统，~~在&lt;a href=&quot;http://duoshuo.com/&quot;&gt;多说&lt;/a&gt;(点击我要安装)上注册账号，设置域名。比如我的是www.robotkang.duoshuo.com。即多说的用户名为robotkang（后面会用到）~~ 多说已挂！现本网站使用的是Valine评论系统，详情参考：&lt;a href=&quot;https://valine.js.org/#/&quot;&gt;https://valine.js.org/#/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;选择博客模板&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;例如，我选择了&lt;a href=&quot;https://github.com/leopardpan/leopardpan.github.io/&quot;&gt;baixin&lt;/a&gt;的博客模板。如果大家喜欢，可以将这个download下来。也可以去&lt;a href=&quot;https://github.com/MengZheK/kangblog.github.io/&quot;&gt;我的github&lt;/a&gt;上fork我的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;将模板修改为自己的博客&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将上述模板下载后，解压。并将leopardpan.github.io-master里面的文件copy到kangblog.github.io文件夹里。此时，如果你打开Jekyll服务，即：命令行模式输入&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+cd d://zhijun/kangblog.github.io
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+jekyll serve
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后浏览器打开：localhost:4000，此时就能看到原作者（baixin）的博客。&lt;/p&gt;
+
+&lt;p&gt;那么现在来修改模板，呈现你的东西吧。（为了方便编辑各种格式的文件，建议事先安装sublime Text）&lt;/p&gt;
+
+&lt;p&gt;工作路径：&lt;code class=&quot;highlighter-rouge&quot;&gt;d://zhijun/kangblog.github.io&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1、修改配置文件&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;首先打开&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;文件.修改你想修改的地方。&lt;/p&gt;
+
+&lt;p&gt;需要修改的项目包括：
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;titile&lt;/code&gt;:你的博客标题&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;subtitle&lt;/code&gt;:你的博客子标题&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt;:你的博客描述&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;avatarTitle&lt;/code&gt;：你的头像里的标题&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;avatarDesc&lt;/code&gt;：你的头像描述&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;:改成你的域名&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;comment&lt;/code&gt;里的&lt;code class=&quot;highlighter-rouge&quot;&gt;duoshuo&lt;/code&gt;:改成你的多说的用户名&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;social&lt;/code&gt;里面的
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;weibo&lt;/code&gt;：你的微薄id（不是用户昵称）&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt;：你的github用户名&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mail&lt;/code&gt;:你的邮箱&lt;/li&gt;
+      &lt;li&gt;其他的可以补充，没有的可以不写，将原文中的删除即可&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;baidu&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;：你的百度统计的id&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ga&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;:你的Google Analytics的id&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2、修改域名配置文件&lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;修改为你自己的域名，如：&lt;code class=&quot;highlighter-rouge&quot;&gt;robotkang.cc&lt;/code&gt;如果没有直接清空(后面访问时,直接访问自己的github page即可）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3、修改个人文件&lt;code class=&quot;highlighter-rouge&quot;&gt;about.md&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这里也应该修改为你自己的介绍。（要求会基本的markdown语法。）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4、头像&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你想使用自己的头像，那么请打开&lt;code class=&quot;highlighter-rouge&quot;&gt;images&lt;/code&gt;文件夹，将你自己的头像图片放在该文件夹，并重命名为&lt;code class=&quot;highlighter-rouge&quot;&gt;avatar.jpg&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5、网站图标&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果你想使用自己的个性网站图标，同样的将你的图标图片放在该文件夹，并重命名为&lt;code class=&quot;highlighter-rouge&quot;&gt;favicon.png&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6、博客文章&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最后就是你的博客内容。请打开&lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;文件夹，可以把原来的文件都删除掉，然后编辑你自己的博客。&lt;/p&gt;
+
+&lt;p&gt;这里面，你在新建博客时必须包含前6行的内容，其中&lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;后写你自己的博客标题，&lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;后写你自己的时间（但格式要保持一致），&lt;code class=&quot;highlighter-rouge&quot;&gt;tag&lt;/code&gt;后写你自己的标签。后面的内容则是markdown语法的内容。
+将上述文件保存，命名为：&lt;code class=&quot;highlighter-rouge&quot;&gt;2016-08-04-MyFirstBlog.md&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;此时重新启动jekyll服务&lt;/p&gt;
+
+&lt;p&gt;shell&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+cd d://zhijun/kangblog.github.io
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+jekyll serve
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后打开&lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt;，打开博客主页，就可以看到你刚刚发布的这篇博客了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;博客上线&lt;/h3&gt;
+
+&lt;p&gt;之前的操作都是在本地，剩下最关键的一步啦。就是在github客户端将这些changes统统&lt;code class=&quot;highlighter-rouge&quot;&gt;commit&lt;/code&gt;并sync到服务端。详细请查询github如何commit以及sync（客户端就点击几下就ok了）。用git shell的话使用如下命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+git commit -a
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+git push
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;当同步完成后，在浏览器输入你的域名，比如我的是：&lt;code class=&quot;highlighter-rouge&quot;&gt;robotkang.cc&lt;/code&gt;，然后就能看到你的博客了。任何人都可以看到哦。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;掉进过的那些坑&lt;/h2&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;关于jekyll&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在启动jekyll时候，由于gemfile中需要的gem没有安装好，或者有依赖的没有安装，总会报错。解决办法是在官网上查询好依赖关系，依次安装好。&lt;/li&gt;
+  &lt;li&gt;其次，项目中所需要的gem必须都要在gemfile中声明好，否则启动服务失败。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;github-1&quot;&gt;关于github提交冲突的问题&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;发生冲突后，会发现冲突的文件会出现两种内容，当然会有一定的标志。这时候需要将你不需要的那个版本（以及冲突的那个标志）去掉。具体还需要去进一步学习github的相关内容。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-10&quot;&gt;后续学习&lt;/h2&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;版本控制git&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;因为需要经常更新博客。而且不只在一个终端。所以要学习好git来更熟练的操作。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;markdown&quot;&gt;markdown&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;博客的内容基本采用markdown编写，需要熟知markdown语法才能写出更美观的博客。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;htmlcss&quot;&gt;HTML,CSS&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;觉得现在的模板太丑了？那你要学习怎么去设置及设计更符合你审美的博客外观。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;jekyllruby&quot;&gt;jekyll,ruby&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;本博客是基于jekyll搭建的，然而到现在我还是不太知道jekyll到底是个啥。同时jekyll是基于ruby的，哦，ruby我知道是个编程语言。然而不知道怎么编，那还是去学习一下基本语法及常见应用场景吧。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;搜索&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;我还想给自己的博客添加一个搜索功能。后续再想想怎么做吧。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-12&quot;&gt;结束语&lt;/h2&gt;
+
+&lt;p&gt;由于我也是个菜鸟新手。所以如果大家有什么问题的话，可以留言，也可以email（robotkang@foxmail.com）我，请教谈不上，大家一起探讨。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;本文转载自Lilian，后稍加改之。特此声明！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最后编辑时间为: Dec.27, 2017 at 06:02 pm&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 03 Mar 2017 00:00:00 +0800</pubDate>
+        <link>https://shousunny.github.io/2017/03/HowToCreateBlog/</link>
+        <guid isPermaLink="true">https://shousunny.github.io/2017/03/HowToCreateBlog/</guid>
+        
+        <category>博客</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
