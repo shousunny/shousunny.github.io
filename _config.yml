@@ -10,9 +10,9 @@ url: "https://shousunny.github.io"
 
 # Comment
 comment:
-    provider: duoshuo
+    provider: Valine
     duoshuo:
-     short_name: robotkang
+     short_name: shousunny
 
 # Social
 social:
