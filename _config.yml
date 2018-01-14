@@ -1,67 +1,80 @@
-# Welcome to Jekyll!
+# Basic
+title: Robotkang
+subtitle: 自留地
+description: 欢迎来到我的个人网站~
+# 头像里面的标题
+avatarTitle: RobotKang
+# 头像里面的描述
+avatarDesc: 机器人赛事/嵌入式
+url: "http://robotkang.cc"
+
+# Comment
+comment:
+    provider: duoshuo
+    duoshuo:
+     short_name: robotkang
+
+# Social
+social:
+    weibo: 123456789
+    weixing: kang1390305137 
+    github: MengZheK
+    # twitter: 
+    mail: robotkang@foxmail.com
+    csdn: robotkang
+
+# 百度统计 
+# 使用博客模板请去掉或者更换 id 
+baidu:
+    id: 144d500dd9ac4a65465a14b95f3e4ade 
+
+# Google Analytics
+# 使用博客模板请去掉或者更换 id
+#ga:
+# id: UA-84134159-3   
+#  host: auto  
+
+
+# 《----------------- 上面的信息修改成你自己的 ---------------------------》
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: 向死而生
-email: wanglc81#hotmail.com (# -> @)
-description: > # this means to ignore newlines until "baseurl:"
-  起名【向死而生】，是因为人生来就是不断地向死亡靠近。
-  当意识到自己在几十年后即化为尘土，我开始反思：我该如何度过这之后的几十年？我该做些什么？我该留下什么？
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://galian.wang" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: galian123
-github_username: galian123
-site_author: galian.wang
-
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
-theme: minima
-# gems:
-plugins:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
-
-permalink: /blog/:year/:month/:day/:title
-timezone: +0800
-incremental: true
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      author: galian.wang
-
+#  _post/ 下的文章更换成你自己的文章
+#  帮忙star一下，感谢~😆 地址： https://github.com/MengZheK/kangblog.github.io
 #
-# Pagination config
 #
-# gems:			[jekyll-paginate]
-plugins:			[jekyll-paginate]
-paginate:		10
-paginate_path:		"/page:num/"
+# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
-excerpt_separator: <!--more-->
 
-tags_path: /blog/tags/
-category_path: /blog/categories/
+permalink: /:year/:month/:title/
+# Format
+highlighter: rouge
 
-leancloud:
-  enable: true
-  app_id: edcgBgescCWpVAgimGW1nbfL-gzGzoHsz
-  app_key: 2c30PCULFMUSgBVNOwNKpqeD
+textColor: #FF0000
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: 
+
+# The blog button should not be removed.
+blog_button:
+    title: 博客主页
+
+# Navigation buttons in the front page.s
+nav:
+    - {title: 所有文章, description: archive, url: '/archive'}   
+    - {title: 标签, description: tags, url: '/tags'}   
+    - {title: 留言, description: liuyan, url: '/liuyan'}
+    - {title: 资源, description: ziyuan, url: '/ziyuan'}
+    - {title: 关于我, description: about, url: '/about'}
+
+          
+    
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 20
+paginate_path: "page/:num/"
+
+
+
+
+

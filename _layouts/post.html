@@ -1,78 +1,118 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div id="status">
-	<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-	<!-- <span>{{ page.date | date: "%b %d, %Y" }}  by <a href="{{site.url}}/about"> {{ page.author }} </a></span> -->
-	<span class="post-meta">
-		<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>
-		{% if page.author == site.site_author %} by
-		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
-			<span itemprop="name"><a href="{{site.url}}/about"> {{ page.author }} </a>
-			</span>
-		</span>
-		{% else %}
-		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
-			<span itemprop="name"><a href=""> {{ page.author }} </a>
-			</span>
-		</span>
-		{% endif %}
-	</span>
 
-	{% if page.tags != empty %}
-		<span class="tags">
-			<span class="post-meta">  Tag：</span>
-			{% for tag in page.tags %}
-			  <a href="{{ site.baseurl }}{{ site.tags_path }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
-			{% endfor %}
-		</span>
-	{% endif %}
+<!-- mathjax config similar to math.stackexchange -->
 
-	{% if site.leancloud.enable %}
-		<span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
-		 <span class="post-meta-divider">|</span>
-		 <span class="post-meta-item-text"> Hits:  </span>
-		 <span class="leancloud-visitors-count"></span>
-		</span>
-	{% endif %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
 
-	{% if page.categories != empty %}
-		<p class="category">
-			<span class="post-meta"> Category：</span>
-			{% for category in page.categories %}
-			  <a href="{{ site.baseurl }}{{ site.category_path }}#{{ category | slugify }}" class="post-tag">{{ category }}</a>
-			{% endfor %}
-		</p>
-	{% endif %}
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
 
-</div>
-	<br>
-<div id="post" class="post-content" itemprop="articleBody">
-{{ content }}
-</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
 
-<div >
-	（全文完）
-</div>
 
-<div>
-	 <br><br>
-	 版权声明： <br>
-	 本文为 {{ page.author }} 原创文章，转载请注明出处，请勿用于任何商业用途。
-	 <br>
-	 本站原创作品采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议（CC BY-NC-ND 4.0）</a> 进行许可。
-</div>
 
-<div id="related">
-	<br><br>
-  <h2>Related Posts</h2>
-    <ul class="posts">
-	    {% for post in site.related_posts limit:5 %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	    {% endfor %}
-	</ul>
-</div>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- latex公式支持代码 end -->
 
+<!-- 代码高亮设置 begin 
+<link rel="stylesheet" href="/css/pygments-default.css">
+ 代码高亮设置 end -->
+
+
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta" style="color:#FF6633">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+
+    {{ content }}
+  </section>
 </article>
+<br>
+{% include share.html %}
+{% include dashang.html %}
+{% include new-old.html %}
+
+
+
+<br>
+
+<br><br><br></br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valine - A simple comment system based on Leancloud.</title>
+    <!--Leancloud 操作库:-->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!--Valine 的核心代码库:-->
+    <script src="/Valine-1.1.8/dist/Valine.min.js"></script>
+</head>
+<body>
+    <div class="comment"></div>
+    
+    <script>
+        new Valine({
+            // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+            av: AV, 
+            el: '.comment', // 
+            app_id: '5z3QHKTEMlSqxReRnfeFG1cC-gzGzoHsz', // 这里填写上面得到的APP ID
+            app_key: '59CrEdy9yw1xmqcDQ4JcJbWy', // 这里填写上面得到的APP KEY
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!', // [v1.0.7 new]留言框占位提示文字
+            avatar:'wavatar',
+            path:window.location.pathname,
+            guest_info:['nick','mail','link'] ,
+            pageSize:10,
+        });
+    </script>
+</body>
+</html>	
+
+<!--div id="plus"></div>
+<script src="https://qingqing.com/static/js/plus.js"></script-->
+
+
+
+
+<link href="/css/top.css/" rel="stylesheet" type="text/css" />
+<script src="/js/jquery.js?v=1.83.min/" type="text/javascript"></script>
+<script src="/js/top.js/"></script>
+<div style="display: none;" id="rocket-to-top">
+<div style="opacity:0;display: block;" class="level-2"></div>
+<div class="level-3"></div>
+
+
+
+
