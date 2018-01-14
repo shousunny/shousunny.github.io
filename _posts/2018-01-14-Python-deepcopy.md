@@ -89,8 +89,10 @@ Import copy 或 from copy import deepcopy
 >> a  
 [1, 2, 3]   
 '''   
+
 **2、dict类存在浅拷贝问题，替换新复制的字典里的值不会改变原字典，但修改一个值时，会影响到原字典。额。。这个很绕。因此需要特别注意对值进行替换（全部）和修改（部分）的差别。**  
-![deepcopy—dict](/images/deepcopy_dict.png)
+![deepcopy—dict](/images/deepcopy_dict.png)   
+
 **3.使用deepcopy(var)可以完全的复制一个类，两个类不再有任何关联,从而解决浅拷贝问题。**  
 
 **4、对于自定义类，由于没有内建的copy()函数，需要采用deepcopy进行完全复制。要注意：copy属于python自带类（list，dict等）内建的方法，采用dict.copy()调用，而deepcopy属于导入的外部函数，采用参数的形式，deepcopy（var）对变量进行复制**   
