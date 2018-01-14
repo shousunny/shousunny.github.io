@@ -1,36 +1,67 @@
-meta:
-    site_title: "雁起平沙的文艺博客"
-    site_subtitle: "人生就是不停的战斗"
-    site_language: "zh-cn"
-    absolute_baseurl: http://art.yanping.me
-    domain: yanping.me
-    author:
-        full_name: Chen Yanping
-        short_name: ypchen
-        name: ypchen
-        email: chen@yanping.me
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-url: http://art.yanping.me
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: 向死而生
+email: wanglc81#hotmail.com (# -> @)
+description: > # this means to ignore newlines until "baseurl:"
+  起名【向死而生】，是因为人生来就是不断地向死亡靠近。
+  当意识到自己在几十年后即化为尘土，我开始反思：我该如何度过这之后的几十年？我该做些什么？我该留下什么？
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://galian.wang" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: galian123
+github_username: galian123
+site_author: galian.wang
 
-baseurl: /
-
+# Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+theme: minima
+# gems:
+plugins:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
 
-# markdown: maruku
-# maruku:
-#   use_divs: true
-#    use_tex: true
-#    png_engine : blahtex
-#    png_dir    : images/latex/
-#    png_url    : /images/latex/
-
-pygments: false
 permalink: /blog/:year/:month/:day/:title
+timezone: +0800
+incremental: true
 
-disqus_short_name: ypchenstory
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: galian.wang
 
-      
-css:
-    - css/screen.css
+#
+# Pagination config
+#
+# gems:			[jekyll-paginate]
+plugins:			[jekyll-paginate]
+paginate:		10
+paginate_path:		"/page:num/"
 
+excerpt_separator: <!--more-->
 
+tags_path: /blog/tags/
+category_path: /blog/categories/
+
+leancloud:
+  enable: true
+  app_id: edcgBgescCWpVAgimGW1nbfL-gzGzoHsz
+  app_key: 2c30PCULFMUSgBVNOwNKpqeD
