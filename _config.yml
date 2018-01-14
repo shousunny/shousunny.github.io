@@ -1,16 +1,16 @@
 meta:
-    site_title: "shousunny的博客"
+    site_title: "雁起平沙的文艺博客"
     site_subtitle: "人生就是不停的战斗"
     site_language: "zh-cn"
-    absolute_baseurl: https://shousunny.github.io/
-    domain: shousunny.github.io
+    absolute_baseurl: http://art.yanping.me
+    domain: yanping.me
     author:
-        full_name: Shou Sunny
-        short_name: SS
-        name: sunny
-        email: shousunny@foxmail.com
+        full_name: Chen Yanping
+        short_name: ypchen
+        name: ypchen
+        email: chen@yanping.me
 
-url: https://shousunny.github.io/
+url: http://art.yanping.me
 
 baseurl: /
 
@@ -27,7 +27,7 @@ markdown: kramdown
 pygments: false
 permalink: /blog/:year/:month/:day/:title
 
-disqus_short_name: SSstory
+disqus_short_name: ypchenstory
 
       
 css:
