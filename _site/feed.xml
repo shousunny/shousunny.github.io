@@ -5,9 +5,121 @@
     <description>欢迎来到我的个人网站~</description>
     <link>https://shousunny.github.io/</link>
     <atom:link href="https://shousunny.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Jan 2018 20:46:20 +0800</pubDate>
-    <lastBuildDate>Sun, 14 Jan 2018 20:46:20 +0800</lastBuildDate>
+    <pubDate>Sun, 14 Jan 2018 21:39:31 +0800</pubDate>
+    <lastBuildDate>Sun, 14 Jan 2018 21:39:31 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>浅拷贝问题浅析与解决方法（基于python3.4）</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;用markdown写的第一篇技术博客，使用Python类复制时走过的坑，&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;1 问题描述&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;浅拷贝问题最简单的体现方式，将一个类a（list等）赋值给另一个变量b，则修改a，会同时改变b。 &lt;br /&gt;
+‘’’ &lt;br /&gt;
+» a &lt;br /&gt;
+[1, 2, 1] &lt;br /&gt;
+» b=a &lt;br /&gt;
+» a &lt;br /&gt;
+[1, 2, 1] &lt;br /&gt;
+» b &lt;br /&gt;
+[1, 2, 1] &lt;br /&gt;
+» a.append(3) &lt;br /&gt;
+» a &lt;br /&gt;
+[1, 2, 1, 3] &lt;br /&gt;
+» b &lt;br /&gt;
+[1, 2, 1, 3] &lt;br /&gt;
+» &lt;br /&gt;
+‘’’&lt;/li&gt;
+  &lt;li&gt;以如下方式复制扩展的列表，也存在浅拷贝问题，c中的三个list元素指向了同一个list原型，对其中一个元素进行扩展时 ，三个元素同时发生了变化。 &lt;br /&gt;
+‘’’ &lt;br /&gt;
+» c=[[]]*3 &lt;br /&gt;
+» c &lt;br /&gt;
+[[], [], []] &lt;br /&gt;
+» c[1].append(1) &lt;br /&gt;
+» c &lt;br /&gt;
+[[1], [1], [1]] &lt;br /&gt;
+»
+‘’’&lt;/li&gt;
+  &lt;li&gt;下面这段代码更让人吃惊，将c[1]赋值给b，修改b时，c的元素也全部发生了变化。 &lt;br /&gt;
+‘’’ &lt;br /&gt;
+» c=[[]]*3 &lt;br /&gt;
+» c &lt;br /&gt;
+[[], [], []] &lt;br /&gt;
+» b=c[1] &lt;br /&gt;
+» b &lt;br /&gt;
+[] &lt;br /&gt;
+» b.append(1) &lt;br /&gt;
+» b &lt;br /&gt;
+[1] &lt;br /&gt;
+» c &lt;br /&gt;
+[[1], [1], [1]] &lt;br /&gt;
+» &lt;br /&gt;
+‘’’&lt;/li&gt;
+  &lt;li&gt;对c中的元素进行加减乘除的运算修改时，c中的其他元素也同时变化，基本可以表明用c = [[]]*3这种方式产生的c中的三个元素，本质上是同一个元素， &lt;br /&gt;
+‘’’ &lt;br /&gt;
+» c[1][0] &lt;br /&gt;
+1 &lt;br /&gt;
+» c[1][0] += 1 &lt;br /&gt;
+» c[1][0] += 1 &lt;br /&gt;
+» c[1][0] &lt;br /&gt;
+3 &lt;br /&gt;
+» c &lt;br /&gt;
+[[3], [3], [3]] &lt;br /&gt;
+»
+‘’’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;2.浅拷贝的解决方案&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;解决上述浅拷贝问题，可利用copy模块的copy()和deepcopy()方法。
+Import copy 或 from copy import deepcopy
+经过测试（python3.4）主要特点如下：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;1、list类进行copy时，两个变量相互独立，互不影响。&lt;/strong&gt; &lt;br /&gt;
+‘’’ &lt;br /&gt;
+» a=[1,2,3]&lt;br /&gt;
+» b=a.copy()&lt;br /&gt;
+» b&lt;br /&gt;
+[1, 2, 3]&lt;br /&gt;
+» b[2] =8&lt;br /&gt;
+» a&lt;br /&gt;
+[1, 2, 3]&lt;br /&gt;
+» b&lt;br /&gt;
+[1, 2, 8]&lt;br /&gt;
+» b.append(2)&lt;br /&gt;
+» b&lt;br /&gt;
+[1, 2, 8, 2]&lt;br /&gt;
+» a&lt;br /&gt;
+[1, 2, 3] &lt;br /&gt;
+‘’’ &lt;br /&gt;
+&lt;strong&gt;2、dict类存在浅拷贝问题，替换新复制的字典里的值不会改变原字典，但修改一个值时，会影响到原字典。额。。这个很绕。因此需要特别注意对值进行替换（全部）和修改（部分）的差别。&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/deepcopy_dict.png&quot; alt=&quot;deepcopy—dict&quot; /&gt;
+&lt;strong&gt;3.使用deepcopy(var)可以完全的复制一个类，两个类不再有任何关联,从而解决浅拷贝问题。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4、对于自定义类，由于没有内建的copy()函数，需要采用deepcopy进行完全复制。要注意：copy属于python自带类（list，dict等）内建的方法，采用dict.copy()调用，而deepcopy属于导入的外部函数，采用参数的形式，deepcopy（var）对变量进行复制&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;3.总结&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;涉及到类的复制和赋值时，最好不好直接用class1 = class2的方式对类进行赋值，也不要采用[class]*number 的方式，对类进行拓展。直接采用deepcopy()方法，就能避免浅拷贝问题。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;最后编辑时间为: Jan.14, 2018 at 21:16&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 14 Jan 2018 00:00:00 +0800</pubDate>
+        <link>https://shousunny.github.io/2018/01/Python-deepcopy/</link>
+        <guid isPermaLink="true">https://shousunny.github.io/2018/01/Python-deepcopy/</guid>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Jekyll+Github个人博客构建之路</title>
