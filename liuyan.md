@@ -103,11 +103,11 @@ function setHalfVolume()
 
 
 <!-- 多说评论框 start 
-	<div class="ds-thread" data-thread-key="/liuyan/" data-title="留言板" data-url="http://roboutkang/liuyan/"></div>
+	<div class="ds-thread" data-thread-key="/liuyan/" data-title="留言板" data-url="http://robotkang/liuyan/"></div>
 <!-- 多说评论框 end 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) 
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"robotkang"};
+var duoshuoQuery = {short_name:"shousunny"};
 	(function() {
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;

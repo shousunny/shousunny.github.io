@@ -208,7 +208,7 @@ git push
 
 ## 结束语
 
-由于我也是个菜鸟新手。所以如果大家有什么问题的话，可以留言，也可以email（robotkang@foxmail.com）我，请教谈不上，大家一起探讨。
+由于我也是个菜鸟新手。所以如果大家有什么问题的话，可以留言，也可以email（shousunny@foxmail.com）我，请教谈不上，大家一起探讨。
 
 
 **本文转载自robotkang，后稍加改之。特此声明！** 
